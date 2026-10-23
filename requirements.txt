@@ -1,0 +1,4 @@
+Flask>=3.0
+osmnx==1.9.1
+networkx>=3.2
+folium>=0.17.0

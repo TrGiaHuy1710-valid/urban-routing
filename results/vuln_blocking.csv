@@ -1,0 +1,6 @@
+blocked_top_k,affected_pct,disconnected_pct,mean_detour_pct_of_affected,p90_detour_pct,max_detour_pct
+1,26.33,0.0,2.27,4.17,19.8
+3,26.33,0.33,2.55,4.9,11.08
+5,28.0,1.0,4.11,8.47,27.62
+10,31.33,1.33,9.12,18.6,64.61
+20,45.67,1.33,12.74,34.73,90.56

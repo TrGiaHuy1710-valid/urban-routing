@@ -1,0 +1,99 @@
+BENCHMARK RESULTS
+================================================================================
+
+Case #1 (very_short)
+  Distance: 0.526 km
+  Dijkstra: 4.02 ms, 162 nodes
+  A*: 2.13 ms, 56 nodes
+  Speedup: 1.89x, Node reduction: 65.4%
+
+Case #2 (very_short)
+  Distance: 0.615 km
+  Dijkstra: 2.11 ms, 139 nodes
+  A*: 1.88 ms, 58 nodes
+  Speedup: 1.12x, Node reduction: 58.3%
+
+Case #3 (very_short)
+  Distance: 0.704 km
+  Dijkstra: 0.00 ms, 215 nodes
+  A*: 5.61 ms, 77 nodes
+  Speedup: 0.00x, Node reduction: 64.2%
+
+Case #4 (very_short)
+  Distance: 0.524 km
+  Dijkstra: 2.01 ms, 103 nodes
+  A*: 2.22 ms, 24 nodes
+  Speedup: 0.91x, Node reduction: 76.7%
+
+Case #5 (short)
+  Distance: 2.420 km
+  Dijkstra: 9.04 ms, 2809 nodes
+  A*: 4.12 ms, 595 nodes
+  Speedup: 2.19x, Node reduction: 78.8%
+
+Case #6 (short)
+  Distance: 1.416 km
+  Dijkstra: 4.05 ms, 553 nodes
+  A*: 3.02 ms, 147 nodes
+  Speedup: 1.34x, Node reduction: 73.4%
+
+Case #7 (short)
+  Distance: 1.825 km
+  Dijkstra: 7.62 ms, 2330 nodes
+  A*: 3.26 ms, 381 nodes
+  Speedup: 2.34x, Node reduction: 83.6%
+
+Case #8 (short)
+  Distance: 2.280 km
+  Dijkstra: 7.85 ms, 3498 nodes
+  A*: 4.13 ms, 713 nodes
+  Speedup: 1.90x, Node reduction: 79.6%
+
+Case #9 (medium)
+  Distance: 2.717 km
+  Dijkstra: 3.08 ms, 2867 nodes
+  A*: 4.42 ms, 486 nodes
+  Speedup: 0.70x, Node reduction: 83.0%
+
+Case #10 (medium)
+  Distance: 4.255 km
+  Dijkstra: 22.84 ms, 8511 nodes
+  A*: 10.40 ms, 1979 nodes
+  Speedup: 2.20x, Node reduction: 76.7%
+
+Case #11 (medium)
+  Distance: 3.589 km
+  Dijkstra: 8.55 ms, 2804 nodes
+  A*: 3.90 ms, 323 nodes
+  Speedup: 2.19x, Node reduction: 88.5%
+
+Case #12 (medium)
+  Distance: 2.996 km
+  Dijkstra: 13.01 ms, 4086 nodes
+  A*: 5.15 ms, 508 nodes
+  Speedup: 2.52x, Node reduction: 87.6%
+
+Case #13 (long)
+  Distance: 7.566 km
+  Dijkstra: 22.76 ms, 8464 nodes
+  A*: 5.56 ms, 844 nodes
+  Speedup: 4.09x, Node reduction: 90.0%
+
+Case #14 (long)
+  Distance: 6.987 km
+  Dijkstra: 26.60 ms, 10044 nodes
+  A*: 13.27 ms, 2033 nodes
+  Speedup: 2.00x, Node reduction: 79.8%
+
+Case #15 (long)
+  Distance: 7.705 km
+  Dijkstra: 29.61 ms, 8915 nodes
+  A*: 16.21 ms, 2040 nodes
+  Speedup: 1.83x, Node reduction: 77.1%
+
+Case #16 (long)
+  Distance: 9.414 km
+  Dijkstra: 29.95 ms, 10605 nodes
+  A*: 31.23 ms, 4964 nodes
+  Speedup: 0.96x, Node reduction: 53.2%
+

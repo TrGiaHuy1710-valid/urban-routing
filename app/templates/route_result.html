@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kết quả tìm đường</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .back-link {
+      display: inline-block;
+      color: #667eea;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+    }
+    .back-link:hover {
+      transform: translateX(-5px);
+    }
+    h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .info-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+    .info-card h3 {
+      font-size: 0.9em;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+    .info-card .value {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    .info-card .unit {
+      font-size: 0.8em;
+      opacity: 0.8;
+    }
+    .map-container {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      height: 600px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .stats-section {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+    .stats-section h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .route-info {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .route-info strong {
+      color: #667eea;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="back-link">← Quay lại</a>
+    <h2>Kết quả tìm đường</h2>
+    
+    <div class="stats-section">
+      <h3>Thông tin tuyến đường</h3>
+      <div class="route-info">
+        <strong>Từ:</strong> {{ start }}
+      </div>
+      <div class="route-info">
+        <strong>Đến:</strong> {{ end }}
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Khoảng cách</h3>
+        <div class="value">{{ "%.3f"|format(length_km) }}</div>
+        <div class="unit">km</div>
+      </div>
+      
+      <div class="info-card">
+        <h3>Số node</h3>
+        <div class="value">{{ nodes_explored }}</div>
+        <div class="unit">nodes đã duyệt</div>
+      </div>
+      
+      <div class="info-card">
+        <h3>Thời gian</h3>
+        <div class="value">{{ "%.2f"|format(time_ms) }}</div>
+        <div class="unit">ms</div>
+      </div>
+      
+      <div class="info-card">
+        <h3>Thuật toán</h3>
+        <div class="value" style="font-size: 1.5em;">{{ algorithm }}</div>
+        <div class="unit">tự thiết kế</div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      {{ map_html|safe }}
+    </div>
+  </div>
+</body>
+</html>
